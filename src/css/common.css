@@ -23,3 +23,23 @@ button {
   cursor: pointer;
 }
 
+.gallery {
+  display: flex;
+  justify-content:space-between;
+
+}
+.gallery img {
+  object-fit:cover;
+  height: 200px;
+  
+}
+
+.gallery li {
+list-style: none;
+
+}
+ 
+
+
+  
+
