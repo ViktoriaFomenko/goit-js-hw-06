@@ -1,4 +1,4 @@
-const input = document.getElementById('validation-input');
+const input = document.querySelector('#validation-input');
 const requiredLength = parseInt(input.getAttribute('data-length'));
 
 console.log(requiredLength);
@@ -12,7 +12,6 @@ function onInputFocus(event) {
 }
 
 function onInputBlur(event) {
-  // console.log(`event: ${event.currentTarget.classList}`);
   event.currentTarget.value.length === requiredLength
     ? event.currentTarget.classList.add(`valid`)
     : event.currentTarget.classList.add(`invalid`);
