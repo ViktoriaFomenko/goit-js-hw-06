@@ -13,12 +13,16 @@ function formOnSubmit(event) {
 
   if (formMail === '' || formPassword === '') {
     alert(`Всі поля повинні бути заповнені!`);
-  }
-  const formData = new FormData(event.currentTarget);
+  } else {
+    const formData = new FormData(event.currentTarget);
 
-  formData.forEach((value, name) => {
-    console.log('formOnSubmit - name:', name);
-    console.log('formOnSubmit - value:', value);
-  });
-  document.querySelector('.login-form').reset();
+    const result = {};
+    formData.forEach((value, name) => {
+      // console.log(`name=${name}, value=${value}`);
+      result[name] = value;
+    });
+    console.log(result);
+
+    document.querySelector('.login-form').reset();
+  }
 }

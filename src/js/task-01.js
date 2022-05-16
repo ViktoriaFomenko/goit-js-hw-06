@@ -1,7 +1,7 @@
-const catRef = document.querySelectorAll('li.item');
+const catRef = document.querySelectorAll('#categories>li');
 console.log(catRef);
 console.log(`Number of categories: ` + catRef.length);
 catRef.forEach(ref => {
-  console.log('Category:' + ref.querySelector('h2').textContent);
-  console.log('Elements: ' + ref.querySelector('ul').querySelectorAll('li').length);
+  console.log('Category:' + ref.firstElementChild.textContent);
+  console.log('Elements: ' + ref.lastElementChild.children.length);
 });

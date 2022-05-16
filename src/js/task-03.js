@@ -23,4 +23,4 @@ images.forEach(img => {
   `);
 });
 
-listRef.insertAdjacentHTML('afterbegin', [...arr]);
+listRef.insertAdjacentHTML('afterbegin', arr.join(''));
